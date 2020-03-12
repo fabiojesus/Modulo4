@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consola", "Consola\Consola.csproj", "{075FB82A-7749-41F6-B379-B27150699952}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consola", "Consola\Consola.csproj", "{075FB82A-7749-41F6-B379-B27150699952}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fichas", "Fichas", "{7BE5E54D-3380-46EC-96B3-B1301E9B2F2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ficha10", "Ficha10\Ficha10.csproj", "{657C2AFC-41EA-4154-A086-E98739B649AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{8F3E2DFF-8103-4B97-A120-E3C45F17269F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,21 @@ Global
 		{075FB82A-7749-41F6-B379-B27150699952}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{075FB82A-7749-41F6-B379-B27150699952}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{075FB82A-7749-41F6-B379-B27150699952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{657C2AFC-41EA-4154-A086-E98739B649AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{657C2AFC-41EA-4154-A086-E98739B649AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{657C2AFC-41EA-4154-A086-E98739B649AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{657C2AFC-41EA-4154-A086-E98739B649AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F3E2DFF-8103-4B97-A120-E3C45F17269F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F3E2DFF-8103-4B97-A120-E3C45F17269F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F3E2DFF-8103-4B97-A120-E3C45F17269F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F3E2DFF-8103-4B97-A120-E3C45F17269F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{657C2AFC-41EA-4154-A086-E98739B649AB} = {7BE5E54D-3380-46EC-96B3-B1301E9B2F2B}
+		{8F3E2DFF-8103-4B97-A120-E3C45F17269F} = {7BE5E54D-3380-46EC-96B3-B1301E9B2F2B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FBE7963B-45AA-49B8-A993-58C5308369B6}
