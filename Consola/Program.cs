@@ -1,6 +1,7 @@
 ﻿using System;
 using Common;
 using Ficha10;
+using Ficha12;
 
 namespace Consola
 {
@@ -8,16 +9,7 @@ namespace Consola
     {
         static void Main(string[] args)
         {
-            Menu.Instance.Load();
-            Console.WriteLine("eowkqek");
-            Console.WriteLine("eowkqek");
-            Console.WriteLine("eowkqek");
-            Console.WriteLine("eowkqek");
-            Console.WriteLine("eowkqek");
-            Console.WriteLine("eowkqek");
-            Menu.Instance.ClearRequest();
-            
-
+            F12G1.Ex16();
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Common
 {
-    public class InputRequest
+    public static class InputRequest
     {
         /// <summary>
         /// Requests an input for an integer value
@@ -47,5 +47,7 @@ namespace Common
             Console.WriteLine(message);
             return Console.ReadLine();
         }
+
+
     }
 }
