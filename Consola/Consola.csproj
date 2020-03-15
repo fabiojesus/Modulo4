@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Ficha10\Ficha10.csproj" />
+    <ProjectReference Include="..\Ficha11\Ficha11.csproj" />
     <ProjectReference Include="..\Ficha12\Ficha12.csproj" />
   </ItemGroup>
 

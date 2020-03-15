@@ -1,6 +1,7 @@
 ﻿using System;
 using Common;
 using Ficha10;
+using Ficha11;
 using Ficha12;
 
 namespace Consola
@@ -9,8 +10,7 @@ namespace Consola
     {
         static void Main(string[] args)
         {
-            F10G3.Ex1();
-            F10G3.Ex2();
+            F12G1.Ex15();
         }
     }
 }
