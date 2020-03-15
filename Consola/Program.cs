@@ -9,7 +9,8 @@ namespace Consola
     {
         static void Main(string[] args)
         {
-            F12G1.Ex16();
+            F10G3.Ex1();
+            F10G3.Ex2();
         }
     }
 }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Common;
 
 namespace Ficha10
@@ -19,7 +17,7 @@ namespace Ficha10
         public static void Ex2()
         {
             var radius = InputRequest.RequestDouble("Qual o raio?");
-            var perimeter = 2 * 3.14 * radius * radius;
+            var perimeter = 2 * 3.14 * radius;
             var area = 3.14 * radius * radius;
             Console.WriteLine($"A àrea do circulo é {area} e o perímetro é {perimeter}");
         }

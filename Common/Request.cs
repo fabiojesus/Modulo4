@@ -16,13 +16,15 @@ namespace Common
         }
 
         /// <summary>
-        /// Requests an input for an double value
+        /// Requests an input for an double value. If the value is not parsable, but still correct, 
         /// </summary>
         /// <param name="message">The message that should be presented to the user</param>
         /// <returns>The inputted value or 0.00 by default</returns>
         public static double RequestDouble(string message)
         {
-            double.TryParse(RequestString(message), out var @double);
+            var res = RequestString(message);
+            res = res.Replace('.', ',');
+            double.TryParse(res, out var @double);
             return @double;
         }
 

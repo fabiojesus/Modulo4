@@ -44,19 +44,6 @@ namespace Ficha10
             Console.WriteLine($"{output} = {total}");
         }
 
-        /// <summary>
-        /// Concats a number to the output with a prefix, and adds the inputted value to a totalizer
-        /// </summary>
-        /// <param name="counter">just a number to notify the number's position'</param>
-        /// <param name="total">the current total</param>
-        /// <param name="output">the current output</param>
-        /// <param name="prefix">the prefix that should be added</param>
-        private static void ConcatNumberAndAddToTotal(int counter, ref double total, ref string output, string prefix)
-        {
-           var temp = InputRequest.RequestDouble($"Introduza o {counter}º número");
-            total += temp;
-            output += prefix+temp;
-        }
 
         /// <summary>
         /// Troca as posições de dois valores
@@ -160,35 +147,126 @@ namespace Ficha10
         {
             var fstNumber = InputRequest.RequestInteger("Qual o 1º número?");
             var sndNumber = InputRequest.RequestInteger("Qual o 2º número?");
-            Console.WriteLine($"A média entre {fstNumber} e {sndNumber} é {(fstNumber + sndNumber)/2}");
+            Console.WriteLine($"A média entre {fstNumber} e {sndNumber} é {((double)(fstNumber + sndNumber))/2}");
         }
 
         /// <summary>
-        /// Solicita dois números e apresenta a média
+        /// Solicita cinco números e apresenta a média
         /// </summary>
         public static void Ex8()
         {
             var counter = 0;
             var output = "A média entre";
             var total = 0.0;
-            AddToTotalizarCountAndOutput(ref output, ref counter, ref total, string.Empty);
-            AddToTotalizarCountAndOutput(ref output, ref counter, ref total, ", ");
-            AddToTotalizarCountAndOutput(ref output, ref counter, ref total, ", ");
-            AddToTotalizarCountAndOutput(ref output, ref counter, ref total, ", ");
-            AddToTotalizarCountAndOutput(ref output, ref counter, ref total, ", ");
-            AddToTotalizarCountAndOutput(ref output, ref counter, ref total, ", ");
-            AddToTotalizarCountAndOutput(ref output, ref counter, ref total, ", ");
-            AddToTotalizarCountAndOutput(ref output, ref counter, ref total, ", ");
-            AddToTotalizarCountAndOutput(ref output, ref counter, ref total, ", ");
-            AddToTotalizarCountAndOutput(ref output, ref counter, ref total, "e ");
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, string.Empty);
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, "e ");
             Console.WriteLine($"{output} é {(total/counter)}");
         }
 
-        private static void AddToTotalizarCountAndOutput(ref string output, ref int counter, ref double total, string prefix)
-        {   
+        /// <summary>
+        /// Solicita dez números e apresenta a média
+        /// </summary>
+        public static void Ex9()
+        {
+            var counter = 0;
+            var output = "A média entre";
+            var total = 0.0;
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, string.Empty);
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
+            AddToTotalizerCountAndOutput(ref output, ref counter, ref total, "e ");
+            Console.WriteLine($"{output} é {(total / counter)}");
+        }
+
+        /// <summary>
+        /// Solicitar um caracter e apresentar uma tabela 3x3 onde cada espaço é preenchido pelo caracter. 
+        /// </summary>
+        public static void Ex10()
+        {
+            var @char = InputRequest.RequestCharacter("Introduza um caracter");
+            WriteCharacterThreeTimes(@char);
+            WriteCharacterThreeTimes(@char);
+            WriteCharacterThreeTimes(@char);
+        }
+
+        /// <summary>
+        /// Solicitar um caracter e apresentar uma tabela 3x3 onde cada espaço é preenchido pelo caracter. 
+        /// </summary>
+        public static void Ex11()
+        {
+            var total = 0.0;
+            var output = string.Empty;
+            var counter = 1;
+            RequestProduct(ref counter, ref total, ref output);
+            RequestProduct(ref counter, ref total, ref output);
+            RequestProduct(ref counter, ref total, ref output);
+            RequestProduct(ref counter, ref total, ref output);
+            RequestProduct(ref counter, ref total, ref output);
+            Console.WriteLine($"{output}\nTotal - {total}");
+        }
+
+        /// <summary>
+        /// Concats a number to the output with a prefix, and adds the inputted value to a totalizer
+        /// </summary>
+        /// <param name="counter">just a number to notify the product's position'</param>
+        /// <param name="total">the current total</param>
+        /// <param name="output">the current output</param>
+        private static void RequestProduct(ref int counter, ref double total, ref string output)
+        {
+            var name = InputRequest.RequestString($"Introduza o nome do {counter}º produto");
+            var price = InputRequest.RequestDouble($"Introduza o preço do {counter}º produto");
+            var quant = InputRequest.RequestDouble($"Introduza a quantidade do {counter}º produto");
+            var totPrice = quant * price;
+            total += totPrice;
+            output += $"{name} ({quant}) - {totPrice}\n";
+            counter++;
+        }
+
+        /// <summary>
+        /// Concats a number to the output with a prefix, and adds the inputted value to a totalizer
+        /// </summary>
+        /// <param name="counter">just a number to notify the number's position'</param>
+        /// <param name="total">the current total</param>
+        /// <param name="output">the current output</param>
+        /// <param name="prefix">the prefix that should be added</param>
+        private static void ConcatNumberAndAddToTotal(int counter, ref double total, ref string output, string prefix)
+        {
+            var temp = InputRequest.RequestDouble($"Introduza o {counter}º número");
+            total += temp;
+            output += prefix + temp;
+        }
+
+        /// <summary>
+        /// Adds a value to a totalizer, a counter and a string output
+        /// </summary>
+        /// <param name="output"></param>
+        /// <param name="counter"></param>
+        /// <param name="total"></param>
+        /// <param name="prefix"></param>
+        private static void AddToTotalizerCountAndOutput(ref string output, ref int counter, ref double total, string prefix)
+        {
             counter++;
             var fstNumber = InputRequest.RequestInteger($"Qual o {counter}º número?");
             total += fstNumber;
+            output += prefix + fstNumber;
+        }
+
+        /// <summary>
+        /// Writes a character three times
+        /// </summary>
+        /// <param name="char">The character to be written</param>
+        private static void WriteCharacterThreeTimes(char @char)
+        {
+            Console.WriteLine($"{@char} {@char} {@char}");
         }
     }
 }
