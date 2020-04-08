@@ -1,13 +1,14 @@
 ﻿using System;
 using Common;
-namespace Ficha10
+
+namespace Worksheet10
 {
-    public class F10G1
+    public static class GroupOne
     {
         /// <summary>
         /// Solicitar um nome e apresentar Olá [nome]
         /// </summary>
-        public static void Ex1()
+        public static void Ex01()
         {
             var name = InputRequest.RequestString("Introduza o nome");
             Console.WriteLine($"Olá {name}");
@@ -16,7 +17,7 @@ namespace Ficha10
         /// <summary>
         /// Solicitar dois números, a e b, e apresentar a soma
         /// </summary>
-        public static void Ex2()
+        public static void Ex02()
         {
             var firstNumber = InputRequest.RequestDouble("Introduza o 1º número");
             var secondNumber = InputRequest.RequestDouble("Introduza o 2º número");
@@ -27,7 +28,7 @@ namespace Ficha10
         /// <summary>
         /// Solicitar dez números, e apresentar a soma
         /// </summary>
-        public static void Ex3()
+        public static void Ex03()
         {
             var total = 0.00;
             var output = string.Empty;
@@ -48,7 +49,7 @@ namespace Ficha10
         /// <summary>
         /// Troca as posições de dois valores
         /// </summary>
-        public static void Ex4()
+        public static void Ex04()
         {
             var firstNumber = InputRequest.RequestDouble($"Introduza o 1º número");
             var secondNumber = InputRequest.RequestDouble($"Introduza o 2º número");
@@ -61,7 +62,7 @@ namespace Ficha10
         /// <summary>
         /// Aplica a operação a+b*c a três valores
         /// </summary>
-        public static void Ex5A()
+        public static void Ex05A()
         {
             var firstNumber = InputRequest.RequestDouble($"Introduza o 1º número");
             var secondNumber = InputRequest.RequestDouble($"Introduza o 2º número");
@@ -73,31 +74,31 @@ namespace Ficha10
         /// <summary>
         /// Aplica a operação (-a)+b*c a três valores
         /// </summary>
-        public static void Ex5B()
+        public static void Ex05B()
         {
             var firstNumber = InputRequest.RequestDouble($"Introduza o 1º número");
             var secondNumber = InputRequest.RequestDouble($"Introduza o 2º número");
             var thirdNumber = InputRequest.RequestDouble($"Introduza o 3º número");
-            var total = (-1)*firstNumber + secondNumber * thirdNumber;
+            var total = (-1) * firstNumber + secondNumber * thirdNumber;
             Console.WriteLine($"-{firstNumber} + {secondNumber} * {thirdNumber} = {total}");
         }
 
         /// <summary>
         /// Aplica a operação (a+b)%c a três valores
         /// </summary>
-        public static void Ex5C()
+        public static void Ex05C()
         {
             var firstNumber = InputRequest.RequestDouble($"Introduza o 1º número");
             var secondNumber = InputRequest.RequestDouble($"Introduza o 2º número");
             var thirdNumber = InputRequest.RequestDouble($"Introduza o 3º número");
-            var total =  (firstNumber + secondNumber) % thirdNumber;
+            var total = (firstNumber + secondNumber) % thirdNumber;
             Console.WriteLine($"({firstNumber} + {secondNumber}) % {thirdNumber} = {total}");
         }
 
         /// <summary>
         /// Aplica a operação a+b*c/d a quatro valores
         /// </summary>
-        public static void Ex5D()
+        public static void Ex05D()
         {
             var firstNumber = InputRequest.RequestDouble($"Introduza o 1º número");
             var secondNumber = InputRequest.RequestDouble($"Introduza o 2º número");
@@ -110,7 +111,7 @@ namespace Ficha10
         /// <summary>
         /// Aplica a operação a+b/c*d-e%f a seis valores
         /// </summary>
-        public static void Ex5E()
+        public static void Ex05E()
         {
             var firstNumber = InputRequest.RequestDouble($"Introduza o 1º número");
             var secondNumber = InputRequest.RequestDouble($"Introduza o 2º número");
@@ -125,35 +126,35 @@ namespace Ficha10
         /// <summary>
         /// Apresenta a tabuada para um número
         /// </summary>
-        public static void Ex6()
+        public static void Ex06()
         {
             var number = InputRequest.RequestInteger("Qual o número para a tabuada?");
             Console.WriteLine($"{number} x  1 = {number}");
-            Console.WriteLine($"{number} x  2 = {number*2}");
-            Console.WriteLine($"{number} x  3 = {number*3}");
-            Console.WriteLine($"{number} x  4 = {number*4}");
-            Console.WriteLine($"{number} x  5 = {number*5}");
-            Console.WriteLine($"{number} x  6 = {number*6}");
-            Console.WriteLine($"{number} x  7 = {number*7}");
-            Console.WriteLine($"{number} x  8 = {number*8}");
-            Console.WriteLine($"{number} x  9 = {number*9}");
-            Console.WriteLine($"{number} x 10 = {number*10}");
+            Console.WriteLine($"{number} x  2 = {number * 2}");
+            Console.WriteLine($"{number} x  3 = {number * 3}");
+            Console.WriteLine($"{number} x  4 = {number * 4}");
+            Console.WriteLine($"{number} x  5 = {number * 5}");
+            Console.WriteLine($"{number} x  6 = {number * 6}");
+            Console.WriteLine($"{number} x  7 = {number * 7}");
+            Console.WriteLine($"{number} x  8 = {number * 8}");
+            Console.WriteLine($"{number} x  9 = {number * 9}");
+            Console.WriteLine($"{number} x 10 = {number * 10}");
         }
 
         /// <summary>
         /// Solicita dois números e apresenta a média
         /// </summary>
-        public static void Ex7()
+        public static void Ex07()
         {
             var fstNumber = InputRequest.RequestInteger("Qual o 1º número?");
             var sndNumber = InputRequest.RequestInteger("Qual o 2º número?");
-            Console.WriteLine($"A média entre {fstNumber} e {sndNumber} é {((double)(fstNumber + sndNumber))/2}");
+            Console.WriteLine($"A média entre {fstNumber} e {sndNumber} é {((double)(fstNumber + sndNumber)) / 2}");
         }
 
         /// <summary>
         /// Solicita cinco números e apresenta a média
         /// </summary>
-        public static void Ex8()
+        public static void Ex08()
         {
             var counter = 0;
             var output = "A média entre";
@@ -163,13 +164,13 @@ namespace Ficha10
             AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
             AddToTotalizerCountAndOutput(ref output, ref counter, ref total, ", ");
             AddToTotalizerCountAndOutput(ref output, ref counter, ref total, "e ");
-            Console.WriteLine($"{output} é {(total/counter)}");
+            Console.WriteLine($"{output} é {(total / counter)}");
         }
 
         /// <summary>
         /// Solicita dez números e apresenta a média
         /// </summary>
-        public static void Ex9()
+        public static void Ex09()
         {
             var counter = 0;
             var output = "A média entre";

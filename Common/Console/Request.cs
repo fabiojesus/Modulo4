@@ -16,6 +16,17 @@ namespace Common
         }
 
         /// <summary>
+        /// Requests an input for an integer value
+        /// </summary>
+        /// <param name="message">The message that should be presented to the user</param>
+        /// <returns>The inputted value or 0 by default</returns>
+        public static bool RequestBool(string message)
+        {
+            var res = RequestKeyInfo(message + "(s/n)");
+            return res.Key == ConsoleKey.S;
+        }
+
+        /// <summary>
         /// Requests an input for an double value. If the value is not parsable, but still correct, 
         /// </summary>
         /// <param name="message">The message that should be presented to the user</param>
@@ -59,6 +70,17 @@ namespace Common
         {
             Console.WriteLine(message);
             return Console.ReadKey().Key;
+        }
+
+        /// <summary>
+        /// Requests an input for an pressed key
+        /// </summary>
+        /// <param name="message">The message that should be presented to the user</param>
+        /// <returns>The inputted value or "" by default</returns>
+        public static ConsoleKeyInfo RequestKeyInfo(string message)
+        {
+            Console.WriteLine(message);
+            return Console.ReadKey();
         }
     }
 }

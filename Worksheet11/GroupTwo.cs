@@ -3,7 +3,7 @@ using Common;
 
 namespace Ficha11
 {
-    public class F11G2
+    public class GroupTwo
     {
         public static void Ex01()
         {

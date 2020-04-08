@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Text;
 using Common;
 
-namespace Ficha10
+namespace Worksheet10
 {
-    public class F10G2
+    public class GroupTwo
     {
         /// <summary>
         /// Solicita um factóide e apresenta-o como conhecimento existente
         /// </summary>
-        public static void Ex1()
+        public static void Ex01()
         {
             var factoid = InputRequest.RequestString("Diz-me algo que eu não saiba");
-            Console.WriteLine("Eu já sabia que "+factoid);
+            Console.WriteLine("Eu já sabia que " + factoid);
         }
 
         /// <summary>
         /// Solicita dois numeros, apresentando-os sequencialmente
         /// </summary>
-        public static void Ex2()
+        public static void Ex02()
         {
             var fstNum = InputRequest.RequestDouble("Introduz dois números");
             double.TryParse(Console.ReadLine(), out double sndNum);
@@ -29,7 +29,7 @@ namespace Ficha10
         /// <summary>
         /// Converte uma temperatura em ºC para ºF e K
         /// </summary>
-        public static void Ex3()
+        public static void Ex03()
         {
             var temp = InputRequest.RequestDouble("Introduz a temperatura");
             var tempF = temp * 9 / 5 + 32;

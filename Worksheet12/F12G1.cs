@@ -1,12 +1,11 @@
-﻿using Common;
-using System;
+﻿using System;
+using Common;
 using static Common.InputRequest;
-
-namespace Ficha12
+namespace Worksheet12
 {
     public class F12G1
     {
-        public static void Ex1()
+        public static void Ex01()
         {
             var total = 1.0;
             var output = string.Empty;
@@ -22,7 +21,7 @@ namespace Ficha12
             Console.WriteLine($"{output}= {total}");
         }
 
-        public static void Ex2()
+        public static void Ex02()
         {
             var firstNumber = RequestDouble("Introduza o 1º número");
             var secondNumber = RequestDouble("Introduza o 2º número");
@@ -33,7 +32,7 @@ namespace Ficha12
             Console.WriteLine($"{firstNumber} % {secondNumber} = {(firstNumber % secondNumber)}");
         }
 
-        public static void Ex3()
+        public static void Ex03()
         {
             var x = RequestDouble("Introduza o 1º número");
             var y = RequestDouble("Introduza o 2º número");
@@ -42,7 +41,7 @@ namespace Ficha12
             Console.WriteLine($"({x}x{y})+({y}x{z}) = {(x*y)+(y*z)}");
         }
 
-        public static void Ex4()
+        public static void Ex04()
         {
             Console.WriteLine("Introduza um número");
             var num = int.Parse(Console.ReadLine());
@@ -61,7 +60,7 @@ namespace Ficha12
             }
         }
 
-        public static void Ex5()
+        public static void Ex05()
         {
             var res = InputRequest.RequestString("Hello?");
             if (res == "Is it me you're looking for?")

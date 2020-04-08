@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Common
+namespace Modulo4.Fichas.Common.Console
 {
     public class Printer
     {
@@ -21,13 +21,13 @@ namespace Common
         {
             PrintHeaderEdge(edgeSize, edgeColor, @char);
             PrintHeaderEdge(edgeGap, edgeColor, ' ');
-            var currentColor = Console.ForegroundColor;
-            Console.ForegroundColor = textColor;
-            Console.Write(text);
-            Console.ForegroundColor = currentColor;
+            var currentColor = System.Console.ForegroundColor;
+            System.Console.ForegroundColor = textColor;
+            System.Console.Write(text);
+            System.Console.ForegroundColor = currentColor;
             PrintHeaderEdge(edgeGap, edgeColor, ' ');
             PrintHeaderEdge(edgeSize, edgeColor, @char);
-            Console.WriteLine();
+            System.Console.WriteLine();
         }
 
         private static void PrintHeaderEmptyRow(int size, int edgeSize, ConsoleColor edgeColor, char @char)
@@ -35,19 +35,19 @@ namespace Common
             PrintHeaderEdge(edgeSize, edgeColor, @char);
             PrintHeaderEdge(size-(2* edgeSize), edgeColor, ' ');
             PrintHeaderEdge(edgeSize, edgeColor, @char);
-            Console.WriteLine();
+            System.Console.WriteLine();
         }
 
         private static void PrintHeaderEdge(int edgeSize, ConsoleColor edgeColor, char @char, bool newLine = false)
         {
-            var currentColor = Console.ForegroundColor;
-            Console.ForegroundColor = edgeColor;
+            var currentColor = System.Console.ForegroundColor;
+            System.Console.ForegroundColor = edgeColor;
             for (var edgeCounter = 0; edgeCounter < edgeSize; edgeCounter++)
             {
-                Console.Write(@char);
+                System.Console.Write(@char);
             }
-            Console.ForegroundColor = currentColor;
-            if(newLine)Console.WriteLine();
+            System.Console.ForegroundColor = currentColor;
+            if(newLine)System.Console.WriteLine();
         }
         #endregion
 
@@ -57,8 +57,8 @@ namespace Common
         {
             foreach (var item in items)
             {
-                if(ordered) Console.Write((Array.IndexOf(items, item)+1)+" - ");
-                Console.WriteLine(item);
+                if(ordered) System.Console.Write((Array.IndexOf(items, item)+1)+" - ");
+                System.Console.WriteLine(item);
             }
         }
 

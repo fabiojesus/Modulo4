@@ -1,9 +1,9 @@
 ﻿using System;
 using Common;
 
-namespace Ficha11
+namespace Worksheet11
 {
-    public class F11G1
+    public class GroupOne
     {
         public static void Ex01()
         {

@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using Common;
 
-namespace Ficha10
+namespace Worksheet10
 {
-    public class F10G3
+    public class GroupThree
     {
-        public static void Ex1()
+        public static void Ex01()
         {
             var hours = InputRequest.RequestInteger("Quantas horas?");
             var minutes = InputRequest.RequestInteger("Quantos minutos?");
@@ -14,13 +16,12 @@ namespace Ficha10
             Console.WriteLine($"{hours}:{minutes}:{seconds} é equivalente a {total} segundos");
         }
 
-        public static void Ex2()
+        public static void Ex02()
         {
             var radius = InputRequest.RequestDouble("Qual o raio?");
             var perimeter = 2 * 3.14 * radius;
             var area = 3.14 * radius * radius;
             Console.WriteLine($"A àrea do circulo é {area} e o perímetro é {perimeter}");
         }
-
     }
 }
