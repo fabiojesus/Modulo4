@@ -9,9 +9,7 @@
     <ProjectReference Include="..\Worksheet10\Worksheet10.csproj" />
     <ProjectReference Include="..\Worksheet11\Worksheet11.csproj" />
     <ProjectReference Include="..\Worksheet12\Worksheet12.csproj" />
-    <ProjectReference Include="..\Worksheet13\Worksheet13.csproj" />
     <ProjectReference Include="..\Worksheet14\Worksheet14.csproj" />
-    <ProjectReference Include="..\Worksheet15\Worksheet15.csproj" />
   </ItemGroup>
 
 </Project>
